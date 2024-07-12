@@ -1,5 +1,6 @@
 """
 username: rafi
+email: rafi@gamail.com
 password: 123
 Django settings for stylehaven project.
 
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-+xrm!2n#%)tgp^)u_o#xxx6mn)t-wgu@_#l-@bkeyb=!23el)4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'category'
+    'category',
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -72,6 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'stylehaven.wsgi.application'
 
+AUTH_USER_MODEL='account.Account'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -124,6 +127,7 @@ STATICFILES_DIRS = [
     'stylehaven/static'
 ]
 MEDIA_URL='/media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
