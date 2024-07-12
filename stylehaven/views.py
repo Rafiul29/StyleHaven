@@ -1,9 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_list_or_404
 from store.models import Product
+from category.models import Category
 
 def home(request):
-    products=Product.objects.all().filter(is_available=True)
+    
+    products=Product.objects.all().filter
+
     context={
-        "products":products
+        "products":products,
     }
+    
     return render(request,'home.html',context)
