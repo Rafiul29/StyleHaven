@@ -5,6 +5,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 class MyAccountManager(BaseUserManager):
   # create user
   def create_user(self,first_name,last_name,username,email,password=None):
+    print(first_name,last_name,username,email)
     if not email:
       raise ValueError("User must have an email addess")
     
