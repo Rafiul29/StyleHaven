@@ -5,6 +5,7 @@ from carts.models import CartItem,Cart
 from carts.views import _cart_id
 from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
 from django.db.models import Q
+
 # Create your views here.
 def store(request,category_slug=None):
   categories=None
